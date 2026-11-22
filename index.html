@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LinkedIn Post Performance Analyzer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <h1>LinkedIn Post Performance Analyzer</h1>
+  <p class="subtitle">Which of your posts actually reach people — and which format works best?</p>
+</header>
+<main>
+  <section class="stats">
+    <div class="stat-box">
+      <span class="stat-label">Total posts</span>
+      <span id="statPosts" class="stat-value">0</span>
+    </div>
+    <div class="stat-box">
+      <span class="stat-label">Total impressions</span>
+      <span id="statImpressions" class="stat-value">0</span>
+    </div>
+    <div class="stat-box">
+      <span class="stat-label">Avg impressions</span>
+      <span id="statAvg" class="stat-value">0</span>
+    </div>
+    <div class="stat-box highlight">
+      <span class="stat-label">Best post</span>
+      <span id="statBest" class="stat-value small">—</span>
+    </div>
+  </section>
+  <section class="card">
+    <h2>What the numbers say</h2>
+    <p id="insight" class="insight-text">Add a few posts to see the insight.</p>
+  </section>
+  <section class="card">
+    <h2>Impressions per post</h2>
+    <div id="chart" class="chart"></div>
+  </section>
+  <section class="card">
+    <h2>Which format performs best?</h2>
+    <p class="hint">Average impressions grouped by post format. Text-only posts with an external link usually get the least reach.</p>
+    <table class="steps">
+      <thead><tr><th>Format</th><th>Posts</th><th>Avg impressions</th><th>Avg engagement</th></tr></thead>
+      <tbody id="formatRows"></tbody>
+    </table>
+  </section>
+  <section class="card">
+    <h2>Add your post</h2>
+    <div class="form-grid">
+      <div>
+        <label for="pTitle">Post title / topic</label>
+        <input id="pTitle" type="text" placeholder="e.g. My Portfolio Website">
+      </div>
+      <div>
+        <label for="pFormat">Format</label>
+        <select id="pFormat">
+          <option value="Image in post">Image in post</option>
+          <option value="Image + link in comment">Image + link in comment</option>
+          <option value="Text only">Text only</option>
+          <option value="Text + external link">Text + external link</option>
+          <option value="Video">Video</option>
+        </select>
+      </div>
+      <div>
+        <label for="pImpressions">Impressions</label>
+        <input id="pImpressions" type="number" min="0" placeholder="e.g. 120">
+      </div>
+      <div>
+        <label for="pLikes">Likes</label>
+        <input id="pLikes" type="number" min="0" placeholder="e.g. 5">
+      </div>
+      <div>
+        <label for="pComments">Comments</label>
+        <input id="pComments" type="number" min="0" placeholder="e.g. 2">
+      </div>
+      <div class="form-btn">
+        <button id="addBtn" type="button">Add post</button>
+      </div>
+    </div>
+    <p id="formError" class="error" hidden>Please fill the title and impressions.</p>
+  </section>
+  <section class="card">
+    <h2>Your posts</h2>
+    <table class="steps">
+      <thead><tr><th>Post</th><th>Format</th><th>Impressions</th><th>Likes</th><th>Comments</th><th>Engagement</th><th></th></tr></thead>
+      <tbody id="postRows"></tbody>
+    </table>
+    <p class="hint">Your posts are saved in this browser only. The sample posts below are demo data — delete them and add your own.</p>
+    <button id="resetBtn" type="button" class="ghost">Reset to sample data</button>
+  </section>
+</main>
+<footer>
+  <p>Built by Tasleem Bibi — BSCS, Begum Nusrat Bhutto Women University, Sukkur. All numbers shown are sample data.</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
