@@ -1,0 +1,96 @@
+/* LinkedIn Post Performance Analyzer — dark navy / teal theme */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #0b1f33;
+  color: #e8f1f8;
+  line-height: 1.6;
+  padding: 0 16px 40px;
+}
+.hero { text-align: center; padding: 48px 16px 28px; }
+.hero h1 { font-size: 2.1rem; color: #ffffff; letter-spacing: 0.5px; }
+.hero h1::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 4px;
+  background: #14b8a6;
+  margin: 14px auto 0;
+  border-radius: 2px;
+}
+.subtitle { color: #9fc3d8; margin-top: 14px; font-size: 1.05rem; }
+main { max-width: 880px; margin: 0 auto; }
+.stats { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 22px; }
+.stat-box {
+  flex: 1;
+  min-width: 160px;
+  background: #12293f;
+  border: 1px solid #1e4258;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+}
+.stat-box.highlight { border-color: #14b8a6; background: #0f2f2b; }
+.stat-label { display: block; font-size: 0.85rem; color: #9fc3d8; text-transform: uppercase; letter-spacing: 1px; }
+.stat-value { display: block; font-size: 1.7rem; font-weight: 700; color: #ffffff; margin-top: 4px; }
+.stat-value.small { font-size: 1.1rem; line-height: 1.4; }
+.card {
+  background: #12293f;
+  border: 1px solid #1e4258;
+  border-radius: 14px;
+  padding: 24px;
+  margin-bottom: 22px;
+}
+.card h2 { color: #5eead4; font-size: 1.25rem; margin-bottom: 12px; }
+.hint { color: #9fc3d8; font-size: 0.95rem; margin-bottom: 14px; }
+.insight-text { font-size: 1.1rem; color: #ffffff; }
+.chart { display: flex; flex-direction: column; gap: 10px; }
+.bar-row { display: grid; grid-template-columns: 200px 1fr 70px; gap: 12px; align-items: center; }
+.bar-label { font-size: 0.92rem; color: #cfe6f2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.bar-track { background: #0b1f33; border-radius: 6px; height: 26px; overflow: hidden; }
+.bar-fill { height: 100%; background: #14b8a6; border-radius: 6px; min-width: 4px; }
+.bar-fill.top { background: #f59e0b; }
+.bar-num { text-align: right; font-family: "Consolas", "Courier New", monospace; color: #ffffff; font-weight: 700; }
+@media (max-width: 640px) { .bar-row { grid-template-columns: 110px 1fr 55px; } }
+table.steps { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+table.steps th, table.steps td {
+  border: 1px solid #1e4258;
+  padding: 9px 10px;
+  text-align: center;
+}
+table.steps th { background: #0b1f33; color: #5eead4; }
+table.steps td:first-child { text-align: left; }
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+@media (max-width: 640px) { .form-grid { grid-template-columns: 1fr; } }
+label { display: block; font-weight: 600; margin-bottom: 6px; color: #cfe6f2; }
+input[type="text"], input[type="number"], select {
+  width: 100%;
+  padding: 11px 13px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #2b5876;
+  background: #0b1f33;
+  color: #ffffff;
+}
+input:focus, select:focus { outline: 2px solid #14b8a6; border-color: #14b8a6; }
+.form-btn { display: flex; align-items: flex-end; }
+button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  background: #14b8a6;
+  color: #062a26;
+  cursor: pointer;
+}
+button:hover { background: #2dd4bf; }
+button.ghost { background: transparent; border: 1px solid #2b5876; color: #9fc3d8; }
+button.ghost:hover { border-color: #14b8a6; color: #5eead4; }
+button.danger { background: transparent; border: none; color: #f87171; padding: 4px 8px; font-size: 1.1rem; }
+.error { color: #f87171; margin-top: 10px; font-weight: 600; }
+footer { text-align: center; color: #7fa6bd; font-size: 0.9rem; margin-top: 10px; }
